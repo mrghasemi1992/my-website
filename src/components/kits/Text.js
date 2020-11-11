@@ -1,14 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import * as React from 'react';
 import { colors, typography } from '../../styles';
 
-function Text(props) {
-  const { type, children, size, color, ...restProps } = props;
+type Props = {
+  color: string,
+  size: string,
+  type: string,
+  className?: string,
+  children: React.Node,
+};
+
+function Text(props: Props): React.Node {
+  const { type, children, size, color, className } = props;
 
   return React.createElement(
     type,
     {
-      ...restProps,
+      className,
       style: {
         color: colors[color],
         fontSize: typography[size].fontSize,
@@ -18,12 +26,6 @@ function Text(props) {
     children
   );
 }
-
-Text.propTypes = {
-  type: PropTypes.string,
-  size: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-};
 
 Text.defaultProps = {
   type: 'div',
