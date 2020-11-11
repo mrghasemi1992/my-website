@@ -1,10 +1,11 @@
 import React from 'react';
-import { Header } from '../components';
+import { Header, MyPortrait } from '../components';
 
 function Home() {
   return (
     <>
       <Header />
+      <MyPortrait />
     </>
   );
 }

@@ -1,20 +1,24 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import logo from '../assets/images/logo-black.svg';
+import styled from 'styled-components';
+import { logoBlack } from '../assets/images';
 import { handleScroll } from '../utils';
 import { Text } from './kits';
+
+const MyPortrait = styled.img`
+  margin-right: 250px;
+`;
+
+const Logo = styled.img`
+  margin-left: -10px;
+`;
 
 function Header() {
   return (
     <>
       {/* Below Wrapper will be shown for lg screen */}
       <div className="d-none d-lg-flex align-items-center justify-content-center py-5">
-        <img
-          style={{ marginRight: '250px' }}
-          src={logo}
-          alt="Logo"
-          width={100}
-        />
+        <MyPortrait src={logoBlack} alt="Logo" width={100} />
         <div className="d-flex">
           <Text
             size="b24"
@@ -52,12 +56,7 @@ function Header() {
         variant="light"
       >
         <Navbar.Brand>
-          <img
-            style={{ marginLeft: '-10px' }}
-            src={logo}
-            alt="Logo"
-            width={70}
-          />
+          <Logo src={logoBlack} alt="Logo" width={70} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
