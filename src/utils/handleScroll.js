@@ -1,7 +1,7 @@
-function handleScroll(id) {
-  console.log(id);
+// @flow
+function handleScroll(id: string): void {
   const element = document.querySelector(id);
-  element.scrollIntoView({ behavior: 'smooth' });
+  element && element.scrollIntoView({ behavior: 'smooth' });
 }
 
 export default handleScroll;
