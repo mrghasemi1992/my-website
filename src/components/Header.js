@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
@@ -13,7 +14,7 @@ const Logo = styled.img`
   margin-left: -10px;
 `;
 
-function Header() {
+function Header(): React$Node {
   return (
     <>
       {/* Below Wrapper will be shown for lg screen */}

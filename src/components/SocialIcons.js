@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Alert, Overlay } from 'react-bootstrap';
 import styled from 'styled-components';
-import { BootstrapIcons } from './';
 import {
   telegramWhite,
   telegram,

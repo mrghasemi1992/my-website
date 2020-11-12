@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
@@ -23,7 +24,7 @@ const Description = styled(Text)`
   max-width: 800px;
 `;
 
-export default function MyPortrait() {
+export default function MyPortrait(): React$Node {
   return (
     <Background>
       <Wrapper className="d-none d-lg-flex w-100">
