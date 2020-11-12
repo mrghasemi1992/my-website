@@ -1,3 +1,5 @@
+// b: bold, sb: semi-bold, rg: regular, lg: light
+
 const typography = {
   b36: {
     fontWeight: 'bold',

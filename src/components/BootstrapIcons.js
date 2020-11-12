@@ -1,17 +1,17 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { colors } from '../styles';
 
 type Props = {
   name: 'clipboard',
   size: number,
   color: $Keys<typeof colors>,
-  className?: string,
+  className: string,
   onClick?: Function,
 };
 
-function BootstrapIcons(props: Props): React.Node {
-  const { name, size, color } = props;
+function BootstrapIcons(props: Props): React$Node {
+  const { name, size, color, className, onClick } = props;
 
   switch (name) {
     case 'clipboard':
@@ -20,9 +20,10 @@ function BootstrapIcons(props: Props): React.Node {
           width={`${size}em`}
           height={`${size}em`}
           viewBox="0 0 16 16"
-          className="bi bi-clipboard"
+          className={`bi bi-clipboard ${className}`}
           fill={color}
           xmlns="http://www.w3.org/2000/svg"
+          onClick={onClick}
         >
           <path
             fillRule="evenodd"
@@ -35,8 +36,14 @@ function BootstrapIcons(props: Props): React.Node {
         </svg>
       );
     default:
-      return <></>;
+      return null;
   }
 }
+
+BootstrapIcons.defaultProps = {
+  color: 'egyptianBlue',
+  size: 1,
+  className: '',
+};
 
 export default BootstrapIcons;

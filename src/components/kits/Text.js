@@ -1,16 +1,16 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { colors, typography } from '../../styles';
 
 type Props = {
-  color: string,
-  size: string,
+  color: $Keys<typeof colors>,
+  size: $Keys<typeof typography>,
   type: string,
-  className?: string,
-  children: React.Node,
+  children: string,
+  className: string,
 };
 
-function Text(props: Props): React.Node {
+function Text(props: Props): React$Node {
   const { type, children, size, color, className } = props;
 
   return React.createElement(
@@ -29,6 +29,8 @@ function Text(props: Props): React.Node {
 
 Text.defaultProps = {
   type: 'div',
+  color: 'black',
+  size: 'rg14',
 };
 
 export default Text;
