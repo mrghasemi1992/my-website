@@ -1,7 +1,8 @@
+// @flow
 import React from 'react';
 import { Header, MyPortrait } from '../components';
 
-function Home() {
+function Home(): React$Node {
   return (
     <>
       <Header />
