@@ -2,7 +2,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
-import { SocialIcons } from './';
+import { SocialIcons } from './index';
 import { Text } from './kits';
 import { myPortrait } from '../assets/images';
 import { colors } from '../styles';
@@ -13,6 +13,15 @@ const Background = styled.div`
 
 const Wrapper = styled.div`
   padding: 100px 0;
+`;
+
+const SocialIconsWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 3%;
 `;
 
 const Avatar = styled.img`
@@ -26,10 +35,13 @@ const Description = styled(Text)`
 
 export default function MyPortrait(): React$Node {
   return (
-    <Background>
-      <Wrapper className="d-none d-lg-flex w-100">
-        <SocialIcons alignment="vertical" />
-        <div className="d-none d-lg-flex flex-column justify-content-center align-items-center">
+    <Background className="position-relative">
+      {/* Below Wrapper is for lg screen */}
+      <Wrapper className="d-none d-lg-block">
+        <SocialIconsWrapper>
+          <SocialIcons />
+        </SocialIconsWrapper>
+        <div className="d-none d-lg-flex flex-column justify-content-center align-items-center w-100">
           <Avatar
             src={myPortrait}
             alt="Portrait of Mohammad Reza Ghasemi"
@@ -53,6 +65,8 @@ export default function MyPortrait(): React$Node {
           </Description>
         </div>
       </Wrapper>
+
+      {/* Below Container is for screen smaller than lg */}
       <Container className="d-flex d-lg-none flex-column justify-content-center align-items-center py-5">
         <Avatar
           src={myPortrait}

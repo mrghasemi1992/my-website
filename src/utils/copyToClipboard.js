@@ -1,8 +1,8 @@
 // @flow
-function copyToClipboard(newClip: string, callBack: Function): void {
+function copyToClipboard(newClip: string, callBack?: Function): void {
   navigator.clipboard.writeText(newClip).then(
     function () {
-      callBack();
+      callBack && callBack();
     },
     function () {
       /* clipboard write failed */

@@ -21,7 +21,7 @@ function BootstrapIcons(props: Props): React$Node {
           height={`${size}em`}
           viewBox="0 0 16 16"
           className={`bi bi-clipboard ${className}`}
-          fill={color}
+          fill={colors[color]}
           xmlns="http://www.w3.org/2000/svg"
           onClick={onClick}
         >
