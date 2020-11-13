@@ -3,20 +3,19 @@ import React from 'react';
 import { colors, typography } from '../../styles';
 
 type Props = {
+  children: string,
   color: $Keys<typeof colors>,
   size: $Keys<typeof typography>,
   type: string,
-  children: string,
-  className: string,
 };
 
 function Text(props: Props): React$Node {
-  const { type, children, size, color, className } = props;
+  const { children, color, size, type, ...restProps } = props;
 
   return React.createElement(
     type,
     {
-      className,
+      ...restProps,
       style: {
         color: colors[color],
         fontSize: typography[size].fontSize,
@@ -28,9 +27,9 @@ function Text(props: Props): React$Node {
 }
 
 Text.defaultProps = {
-  type: 'div',
   color: 'black',
   size: 'rg14',
+  type: 'div',
 };
 
 export default Text;

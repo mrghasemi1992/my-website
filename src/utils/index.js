@@ -1,4 +1,4 @@
-import handleScroll from './handleScroll';
 import copyToClipboard from './copyToClipboard';
+import handleScroll from './handleScroll';
 
-export { handleScroll, copyToClipboard };
+export { copyToClipboard, handleScroll };

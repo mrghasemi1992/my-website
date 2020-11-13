@@ -1,12 +1,13 @@
 // @flow
 import React from 'react';
-import { Header, MyPortrait } from '../components';
+import { Header, MyPortrait, MySkills } from '../components';
 
 function Home(): React$Node {
   return (
     <>
       <Header />
       <MyPortrait />
+      <MySkills />
     </>
   );
 }
