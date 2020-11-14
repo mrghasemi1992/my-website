@@ -1,4 +1,5 @@
 import logoBlack from './logo-black.svg';
+import logoWhite from './logo-white.svg';
 import myPortrait from './my-portrait.jpg';
 
-export { logoBlack, myPortrait };
+export { logoBlack, logoWhite, myPortrait };

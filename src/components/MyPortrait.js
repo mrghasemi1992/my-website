@@ -39,7 +39,7 @@ export default function MyPortrait(): React$Node {
       {/* Below Wrapper is for lg screen */}
       <Wrapper className="d-none d-lg-block">
         <SocialIconsWrapper>
-          <SocialIcons />
+          <SocialIcons color="egyptianBlue" direction="vertical" />
         </SocialIconsWrapper>
         <div className="d-none d-lg-flex flex-column justify-content-center align-items-center w-100">
           <Avatar

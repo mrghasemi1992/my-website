@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Container } from 'react-bootstrap';
 import { Line, Text } from '../kits';
 import { briefcase, graduationCap } from '../../assets/icons';
-import { DetailSection } from '../index';
+import { DetailSection } from './index';
 import { colors } from '../../styles';
 import { myEducation, myExperience } from '../../data';
 

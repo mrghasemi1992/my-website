@@ -1,6 +1,12 @@
 // @flow
 import React from 'react';
-import { Background, Header, MyPortrait, MySkills } from '../components';
+import {
+  Background,
+  Footer,
+  Header,
+  MyPortrait,
+  MySkills,
+} from '../components';
 
 function Home(): React$Node {
   return (
@@ -9,6 +15,7 @@ function Home(): React$Node {
       <MyPortrait />
       <MySkills />
       <Background />
+      <Footer />
     </>
   );
 }
