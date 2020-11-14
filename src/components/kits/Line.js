@@ -7,8 +7,7 @@ const HorizontalLine = styled.div`
   width: ${(props) => props.length}px;
   border-top: ${(props) => props.thickness}px ${(props) => props.lineStyle}
     ${(props) => colors[props.color]};
-  border-radius: ${(props) => props.radius}px;
-  border-color: ${(props) => colors[props.color]};
+  ${(props) => props.radius && `border-radius: ${props.radius}px`}
 `;
 
 const VerticalLine = styled.div`
