@@ -7,8 +7,8 @@ import { Line, Pill, Text } from './kits';
 
 const Wrapper = styled.div`
   @media (min-width: 1200px) {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 `;
 

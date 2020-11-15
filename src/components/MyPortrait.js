@@ -57,11 +57,8 @@ export default function MyPortrait(): React$Node {
             Front-End Web Developer
           </Text>
           <Description className="text-center pt-4" size="rg18" color="black">
-            I was interested in the computer, since childhood. My major was
-            Industrial Engineering. I worked in this field for four years.
-            Because of my interest in development, I decided to leave my carrier
-            and be a professional web developer. I'm also interested in AI and
-            Blockchain.
+            I'm a front-end web developer working with React, learning Node.js
+            and MQL, also interested in AI and algorithmic trading.
           </Description>
         </div>
       </Wrapper>
