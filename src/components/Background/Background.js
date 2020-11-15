@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container } from 'react-bootstrap';
 import { Line, Text } from '../kits';
-import { briefcase, graduationCap } from '../../assets/icons';
 import { DetailSection } from './index';
 import { colors } from '../../styles';
 import { myEducation, myExperience } from '../../data';
+import { briefcase, mortarboard } from '../../assets/icons';
 
 const StyledContainer = styled(Container)`
   padding-top: 150px;
@@ -16,10 +16,6 @@ const Wrapper = styled.div`
   background: ${colors.solitude};
 `;
 
-const DetailWrapper = styled.div`
-  padding: 20px 0 0 16px;
-`;
-
 export default function Background() {
   return (
     <div className="mt-5">
@@ -28,12 +24,12 @@ export default function Background() {
         <StyledContainer className="d-none d-xl-flex justify-content-between">
           <div id="education">
             <div className="d-flex align-items-center">
-              <img src={graduationCap} alt="Graduation Cap" width={62} />
-              <Text className="px-4" size="b36" color="black">
+              <img src={mortarboard} alt="Mortarboard" width={50} />
+              <Text className="ml-4" size="b36" color="black">
                 Education
               </Text>
             </div>
-            <DetailWrapper>
+            <div className="pl-3">
               {myEducation.map((item, index) => (
                 <div key={index} className="py-4">
                   <DetailSection
@@ -44,16 +40,16 @@ export default function Background() {
                   />
                 </div>
               ))}
-            </DetailWrapper>
+            </div>
           </div>
           <div id="experience">
             <div className="d-flex align-items-center">
               <img src={briefcase} alt="Briefcase" width={50} />
-              <Text className="px-4" size="b36" color="black">
+              <Text className="ml-4" size="b36" color="black">
                 Experience
               </Text>
             </div>
-            <DetailWrapper>
+            <div className="pl-3">
               {myExperience.map((item, index) => (
                 <div key={index} className="py-4">
                   <DetailSection
@@ -64,7 +60,7 @@ export default function Background() {
                   />
                 </div>
               ))}
-            </DetailWrapper>
+            </div>
           </div>
         </StyledContainer>
       </Wrapper>
